@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "nom": "Dupont",
+      "prenom": "Jeanne",
+      "email": "jeanne@mail.com",
+      "dateDeNaissance": "25-10-1998",
+      "id": 1
+    },
+    {
+      "nom": "Durant",
+      "prenom": "Marie",
+      "email": "marie@mail.com",
+      "dateDeNaissance": "10-01-2000",
+      "id": 2
+    },
+    {
+      "nom": "Clement",
+      "prenom": "Thibault",
+      "email": "clement.thibault@gmail.com",
+      "dateDeNaissance": "2022-07-22",
+      "id": 3
+    },
+    {
+      "nom": "Flouquet",
+      "prenom": "Floriannon",
+      "email": "flouquet.floriannon@gmail.com",
+      "dateDeNaissance": "2022-07-17",
+      "id": 4
+    }
+  ]
+}

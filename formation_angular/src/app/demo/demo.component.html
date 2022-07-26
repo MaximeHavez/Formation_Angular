@@ -1,0 +1,63 @@
+<!-- interpolation -->
+<p>
+  {{ message }}
+  {{ id }}
+</p>
+
+<!-- property binding -->
+
+<img [src]="img" alt="">
+
+<!-- event binding -->
+
+<div>
+    <button (click)="displayMessage($event)"> press</button>
+
+</div>
+
+<!-- two-way data binding (banana in he box) -->
+<div>
+<input type="text" [value] = "nombre" #number>
+  <button (click)="newNumber(number)">press</button>
+</div>
+
+<p [ngClass]="'red'">Message en rouge</p>
+
+<p [ngClass]="{
+  'blue' : check,
+  'red' : !check
+
+}">fghgfhfb</p>
+
+<button (click)="changeColor()">change</button>
+
+<p [ngStyle]="{'backgroundColor' : 'blue', 'color' : 'whiteSmoke'}">iuretyir</p>
+
+
+<!-- directive structurelle
+  *ngIf
+  *ngElse
+-->
+
+<p *ngIf="check; then vu else pasvu"></p>
+<ng-template #vu>
+  <p>tu me vois</p>
+</ng-template>
+
+<ng-template #pasvu>
+  <p>tu ne me vois plus</p>
+</ng-template>
+
+<!-- les pipes -->
+
+<p>{{ date | date:"dd/MM/yyyy" }}</p>
+<p>{{ "MessAgE PaS TeRriBle" | uppercase}}</p>
+<p>{{ "MessAgE PaS TeRriBle" | lowercase}}</p>
+
+<!-- forof -->
+
+<div *ngFor="let item of table, let i = index">
+  <p> {{item.prenom}} {{item.nom | uppercase}}, né le {{item.dateDeNaissance}}, index du tableau {{ i }}</p>
+
+
+</div>

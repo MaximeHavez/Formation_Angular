@@ -1,0 +1,28 @@
+
+
+<div *ngFor="let item of user, let i = index" class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}} ({{item.username}})</h5>
+    <p class="card-text">Mail : {{item.email}} </p>
+    <div *ngIf="item.isVisible, then visible else invisible"></div>
+      <ng-template #visible>
+        <p  class="card-text d-flex">Adresse : <br>
+                                      {{item.address.street}} <br>
+                                      {{item.address.suite}} <br>
+                                      {{item.address.city}} {{item.address.zipcode}} <br>
+                              Tel : {{item.phone}}</p>
+
+      </ng-template>
+
+      <ng-template #invisible>
+        <p  class="card-text visually-hidden">Adresse : <br>
+          {{item.address.street}} <br>
+          {{item.address.suite}} <br>
+          {{item.address.city}} {{item.address.zipcode}} <br>
+          Tel : {{item.phone}}</p>
+      </ng-template>
+
+    <a (click)="change(i)" href="#" class="btn btn-primary m-1">Afficher l'adresse</a>
+    <a (click)="delete(i)" href="#" class="btn btn-danger">Supprimer</a>
+  </div>
+</div>

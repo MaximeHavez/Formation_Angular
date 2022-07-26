@@ -1,0 +1,3 @@
+<ul *ngFor="let item of data">
+  <li> {{item.prenom}} {{item.nom}} {{item.email}} {{item.dateDeNaissance}} <button [routerLink]="['/users/details', item.id]">Details</button> <button ()="outId($event)">Supprimer</button></li>
+</ul>

@@ -1,0 +1,30 @@
+
+
+<div class="card m-3" style="width: 25rem;">
+  <div class="card-header">
+    ToDo List
+  </div>
+  <ul *ngFor="let item of todo, let i = index" class="list-group">
+    <li class="list-group-item d-flex justify-content-between">{{item}} <span><button (click)="switchToDone(i)" type="button" class="btn btn-primary">Fait</button> <button (click)="delete(i)" type="button" class="btn btn-warning ms-1">Supprimer</button></span> </li>
+
+
+  </ul>
+</div>
+
+<div class="input-group m-3" style="width: 25rem;">
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" #ajoutTache>
+  <button (click)="addNewToDo(ajoutTache.value)" type="button" class="btn btn-primary ms-1">Ajouter une tâche</button>
+</div>
+
+<div class="card m-3" style="width: 25rem;">
+  <div class="card-header">
+    Done List
+  </div>
+  <ul *ngFor="let item of done, let i = index" class="list-group">
+    <li class="list-group-item d-flex justify-content-between">{{item}} <span><button (click)="switchToToDo(i)" type="button" class="btn btn-primary">Remettre</button> <button (click)="deleteDone(i)" type="button" class="btn btn-warning ms-1">Supprimer</button></span> </li>
+
+
+  </ul>
+</div>
+
+

@@ -1,0 +1,4 @@
+<ul *ngFor="let item of data, let i = index">
+  <li>{{item.task}} <app-delete-task [index]="i" (Outindex)="deleteTask($event)"></app-delete-task></li>
+
+</ul>

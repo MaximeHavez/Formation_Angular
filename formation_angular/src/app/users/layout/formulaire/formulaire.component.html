@@ -1,0 +1,26 @@
+<form class="col-3 m-3" [formGroup]="userForm" (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="nom" class="form-label">Nom : </label>
+    <input type="email" class="form-control" id="nom" formControlName="nom">
+    <div *ngIf="!check">
+      <p *ngIf="userForm.controls.nom.invalid">Nom trop court</p>
+    </div>
+
+  </div>
+  <div class="mb-3">
+    <label for="prenom" class="form-label">Prenom : </label>
+    <input type="email" class="form-control" id="prenom"  formControlName="prenom">
+  </div>
+  <div class="mb-3">
+    <label for="dateDeNaissance" class="form-label">Date de naissance : </label>
+    <input type="date" class="form-control" id="dateDeNaissance" formControlName="dateDeNaissance">
+  </div>
+  <div class="mb-3">
+    <label for="mail" class="form-label">Mail : </label>
+    <input type="email" class="form-control" id="mail" formControlName="email">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>

@@ -1,0 +1,4 @@
+<p>todo-page works!</p>
+
+<app-display [data] = "todoList" (OutIndex)="deleteTask($event)"></app-display>
+<app-addtask (newTask)= addTask($event)></app-addtask>
